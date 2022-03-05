@@ -34,25 +34,17 @@ double expn(double x, uint16_t count) {
 }
 
 double sinn(double x, uint16_t count) {
-  double res = x;
-  for (uint16_t k = 2; k <= count; k++) {
-    if (pown(-1, k - 1) == 1) {
-      res += calcItem(x, (k * 2) - 1);
-    } else {
-      res -= calcItem(x, (k * 2) - 1);
+  double res = 0;
+  for (int k = 1; k <= count; k++) {
+      res += pown(-1, i-1) * calcItem(x, (k * 2) - 1);
     }
-  }
   return res;
 }
 
 double cosn(double x, uint16_t count) {
-  double res = 1;
-  for (uint16_t k = 2; k <= count; k++) {
-    if (pown(-1, k - 1) == 1) {
-      res += calcItem(x, (k * 2) - 2);
-    } else {
-      res -= calcItem(x, (k * 2) - 2);
-    }
-  }
+  double res = 0;
+  for (int k = 1; k <= count; k++) {
+      res += pown(-1, i-1) * calcItem(x, (k * 2) - 2);
+    } 
   return res;
 }
