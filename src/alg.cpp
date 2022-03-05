@@ -16,7 +16,9 @@ uint64_t fact(uint16_t n) {
   if (n == 0) {
     return 1;
   } else {
-    return res = n * fact(n - 1);
+    res = n * fact(n - 1);
+  }
+  return res;
 }
 
 double calcItem(double x, uint16_t n) {
