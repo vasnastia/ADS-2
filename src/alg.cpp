@@ -49,5 +49,14 @@ double sinn(double x, uint16_t count) {
 }
 
 double cosn(double x, uint16_t count) {
-
+  double res = 1;
+  for (int k = 2; k <= count; k++) {
+    if (pown(-1, k - 1) == 1)
+    {
+      res += calcItem(x, (k * 2) - 2);
+    } else {
+      res -= calcItem(x, (k * 2) - 2);
+    }
+  }
+  return res;
 }
