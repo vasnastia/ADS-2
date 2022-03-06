@@ -41,6 +41,7 @@ double sinn(double x, uint16_t count) {
     } else {
       res -= calcItem(x, (k * 2) - 1);
     }
+  }
   return res;
 }
 
@@ -52,5 +53,6 @@ double cosn(double x, uint16_t count) {
     } else {
       res -= calcItem(x, (k * 2) - 2);
     }
+  }
   return res;
 }
